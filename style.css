@@ -3,9 +3,10 @@
 /* Bagian 1 */
 .bagian1{
     /* border: 1px solid; */
-    height: 300px;
+    background-color: rgba(254,252,255,255);
+    height: 500px;
     background-image: url("style/pizza4.jpg");
-    background-position: center 40px;
+    background-position: center 170px;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 15px;
@@ -15,6 +16,7 @@
     display: flex; 
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid; */
 }
 
 #namaumkm{
@@ -36,6 +38,27 @@ a#Pesan{
     padding: 7px 13px;
     border-radius: 17px;
 }
+
+.bawah{
+    text-align: center;
+    /* border: 1px solid; */
+    font-family: Tahoma;
+}
+
+#tagline{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 17px;
+}
+
+#singkat{
+    font-size: 15px;
+    width: 500px;
+    display: block;
+    margin: auto;
+    padding-top: 0px;
+}
+
 
 /* Bagian 2 */
 .bagian2{
