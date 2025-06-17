@@ -1,15 +1,20 @@
 /* Creator : Kasyfi Amalul Ramdhoni */
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Bagian 1 */
 .bagian1{
     /* border: 1px solid; */
     background-color: rgba(254,252,255,255);
     height: 500px;
     background-image: url("style/pizza4.jpg");
-    background-position: center 170px;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 15px;
+    padding-bottom: calc(25%);
 }
 
 .atas{
@@ -70,6 +75,18 @@ a#Pesan{
     border-radius: 15px;
 }
 
+.pizza46:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#pesan-pizza:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
 .info1, .info4{
     font-family: Helvetica;
     text-align: center;
@@ -89,7 +106,7 @@ a#Pesan{
 }
 
 .pizza46{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-family: Tahoma;
     /* border: 1px solid; */
     margin: 20px;
@@ -136,6 +153,19 @@ a#Pesan{
     text-decoration: none;
 }
 
+#lanjutan {
+  font-family: tahoma;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding: 11px;
+  border-radius: 17px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 .info4{
     margin-top: 80px;
 }
@@ -172,6 +202,10 @@ a#Pesan{
     margin-right: 10px;
 }
 
+#logowa:hover, #logoig:hover{
+    background-color: wheat;
+}
+
 div.credit p{
     color: goldenrod;
     text-align: center;
@@ -183,4 +217,58 @@ div.credit p{
 /* Universal */
 html {
     scroll-behavior: smooth;
+}
+
+/* ANIMASI */
+/* Animasi untuk bagian1 */
+.bagian1 {
+    animation: slideUpFade 1s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animasi untuk bagian2 */
+.bagian2 {
+    animation: slideUpFade 1s ease-out 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animasi untuk bagian3 */
+.bagian3 {
+    animation: slideUpFade 1s ease-out 0.9s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi selengkapnya */
+.tersembunyi {
+    display: none;
+}
+
+/* Untuk kontrol animasi menu tambahan */
+.tersembunyi {
+  opacity: 0;
+  transform: translateY(20px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+/* Saat elemen aktif (muncul) */
+.tampil {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px; /* sesuaikan dengan tinggi konten */
 }
