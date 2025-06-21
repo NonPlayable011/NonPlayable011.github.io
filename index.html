@@ -1,4 +1,3 @@
-<!-- Creator : Kasyfi Amalul Ramdhoni -->
  
 <!DOCTYPE html>
 <html>
@@ -10,11 +9,13 @@
     </head>
     <body>
         <div class="bagian1"> <!-- BAGIAN 1 -->
+
             <div class="atas">
                 <img src="style/nama.png" alt="namaumkm" id="namaumkm">
                 <h3 class="kananatas">
                     <a href="index.html" id="Home">Home</a>
                     <a href="#info1" id="Menu">Menu</a>
+                    <button id="backsound" title="O Sole Mio - Jack Jezzro" onclick="startMusic()">🎵</button>
                     <a href="#logowa" id="Pesan">Pesan</a>
                 </h3>
             </div>
@@ -22,6 +23,12 @@
                 <h3 id="tagline">Complete your moment</h3>
                 <p id="singkat">Pizza46 merupakan produk pizza rumahan yang dibuat dengan bahan-bahan berkualitas, menghadirkan cita rasa autentik pizza Italia yang tetap sesuai dengan selera lidah Indonesia.</p>
             </div>
+            <div class="bgvid">
+                <video id="bgvideo" autoplay muted loop>
+                    <source src="Osteria Lucio Italian Restaurant Promo Video.mp4" type="video/mp4">
+                </video>
+            </div>
+                
         </div>
 
         <div class="bagian2" data-aos="fade-up"> <!-- BAGIAN 2 -->
@@ -117,6 +124,35 @@
                 toggleBtn.textContent = "Tutup kembali menu";
                 AOS.refresh(); // agar animasi AOS tetap aktif
                 }
+            });
+        </script>
+
+        <audio id="bgmusic" loop> <!-- BAGIAN MUSIK -->
+            <source src="O Sole Mio.mp3" type="audio/mpeg"> <!-- Credit: O Selo Mio, Jack Jezzro -->
+        </audio>
+        <script>
+            const music = document.getElementById('bgmusic');
+
+            function startMusic() {
+                music.volume = 0.5; // adjust volume
+                music.play();
+            }
+        </script>
+
+        <!-- BAGIAN VIDEO -->
+        <script>
+            window.addEventListener("load", function () {
+                const video = document.getElementById("bgvideo");
+                const videoContainer = document.querySelector(".bgvid");
+
+                const bagian1 = document.querySelector(".bagian1");
+
+                const delay = Math.floor(Math.random() * 2000) + 3000;
+
+                setTimeout(() => {
+                    bagian1.style.backgroundImage = "none"; 
+                    videoContainer.style.opacity = "1";
+                }, delay); 
             });
         </script>
 
