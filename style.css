@@ -1,4 +1,3 @@
-/* Creator : Kasyfi Amalul Ramdhoni */
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -7,6 +6,7 @@ body {
 /* Bagian 1 */
 .bagian1{
     /* border: 1px solid; */
+    /* Osteria Lucio Italian Restaurant Promo Video - Manual Mode Productions  */
     background-color: rgba(254,252,255,255);
     height: 500px;
     background-image: url("style/pizza4.jpg");
@@ -15,6 +15,36 @@ body {
     background-size: contain;
     border-radius: 15px;
     padding-bottom: calc(25%);
+    position: relative;
+}
+
+.bgvid {
+    position: absolute;
+    /* max-height: -10px; */
+    top: 270px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+}
+
+#bgvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+
+    /* width: auto;
+    height: auto; */
+    margin-top: -15%;
+    margin-bottom: -25%;
 }
 
 .atas{
